@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+    <link rel="stylesheet" href="service2.css" />
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer"
+   />
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></head> -->
+  </head>
+  <body>
+    <style>
+      nav {
+    
+    overflow: hidden;
+   
+  }
+  
+  nav ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right; /* Centers the items horizontally */
+  }
+  
+  nav ul li {
+    margin: 0 15px; /* Adjust spacing between items */
+  }
+  
+  nav ul li a {
+    display: block;
+    color:#c44242; 
+    font-weight: bold;
+    text-align: right;
+    padding: 14px 20px;
+    text-decoration:none;
+  }
+  
+  nav ul li a:hover {
+    background-color:rgb(211, 149, 119);
+    border-radius: 4px;
+    color: white;
+  }
+    </style>
+    <nav>
+        <ul>    
+                 <li><a href="project.html">Home</a></li>
+                 <li><a href="about3.html">About Us</a></li>
+                 <li><a href="contact3.html">Contact</a></li>
+                 <li><a href="service2.html">Services</a></li>
+                 <li><a href="shopping.html">Shopping</a></li>
+                 <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+    </nav>
+       
+    <span><p class="one">   &nbsp;  &nbsp;   </p></span>
+    <div class="half">
+    
+    
+   <!-- Section Two -->
+<section>
+  <div class="container">
+      <div class="content ">
+          <div class="text-section fade-in-up">
+              <h1>Residential Interior Design</h1>
+              <p>Your home is your sanctuary—a reflection of who you are and
+                 how you live. We specialize in creating personalized, inviting, 
+                 and well-designed interiors that seamlessly blend style and practicality. 
+                 From complete home transformations to room-by-room makeovers, 
+                 we focus on optimizing space and enhancing your lifestyle. 
+                 Whether you're looking to update a single room or embark on an 
+                 entire home renovation, we’ll guide you through every step of the 
+                 design process.</p>
+              <ul>
+                  <li>•	Complete home design and renovation</li>
+                  <li>•	Room-by-room design (living rooms, bedrooms, kitchens, etc.)</li>
+                  <li>•	Color consultation and furniture selection</li>
+                  <li>•	Lighting design and space optimization</li>
+              </ul>
+              <button id="openModal" class="modal-btn">Schedule Free Consultation</button>
+
+              <!--a href="demo2.html" class="button">Schedule free session</a-->
+              <!--button class="custom-button">Schedule free session </button-->
+          </div>
+          <div class="image-section fade-in-up">
+              <img src="./img/service3.jpg" alt="Residential Interior Design">
+          </div>
+          <!-- Consultation Modal -->
+<div id="consultationModal" class="modal">
+  <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <div class="contact-container">
+        <div class="form-header">
+
+      <h2>Book Free Consultation Session</h2>
+      <p>Book a free demo session with our expert interior designers.</p>
+      </div>
+      <form id="consultationForm">
+        <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div class="form-group">
+            <label for="company">Budget</label>
+            <input type="text" id="budget" name="budget" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <div class="phone-input">
+                <select id="country" name="country">
+                    <option value="IN">IN</option>
+                </select>
+                <input type="text" id="phone-number" name="phone-number" pattern="[0-9]{10}" placeholder="+91-96739-78908" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <div class="form-group terms">
+            <input type="checkbox" id="agree">
+            <label for="agree">By selecting this, you agree to our <a href="#">privacy policy</a>.</label>
+        </div>
+        <button type="submit" class="submit-btn">Book Consultation</button>
+    </form>
+  </div>
+</div>
+</div>
+
+      </div>
+      <div class="content reverse fade-in-up">
+          <div class="text-section">
+              <h1>Commercial Interior Design</h1>
+              <p>In a business setting, the environment plays a critical role in employee morale,
+                 customer experience, and brand identity. Our commercial interior design services are 
+                 designed to elevate your business space into one that enhances productivity, creativity, 
+                 and your brand’s image. Whether it’s an office, retail store, or restaurant, we offer 
+                 thoughtful and creative design solutions that make a lasting impression.</p>
+              <ul>
+                  <li>•	Office spaces & workstations</li>
+                  <li>•	Retail store layouts & design</li>
+                  <li>•	Hospitality and restaurant interiors</li>
+                  <li>•	Branding integration in design</li>
+              </ul>
+          </div>
+          <div class="image-section fade-in-up">
+              <img src="./img/service2.jpg" alt="Commercial Interior Design">
+          </div>
+      </div>
+  </div>
+</section>
+<!--section 3-->
+<section>
+  <div class="wrapper">
+      <div class="section fade-in-up">
+          <div class="text-block">
+              <h1>Virtual Design Consultations</h1>
+              <p>Sometimes, all you need is a little professional advice to get your project 
+                started or to refine your ideas. Our virtual design consultations allow you to 
+                access expert guidance without leaving your home or office. Whether you need 
+                help with color selection, layout suggestions, or furniture arrangements, 
+                we’re here to offer customized solutions that meet your needs.</p>
+              <ul>
+                  <li>•	One-on-one virtual consultations</li>
+                  <li>•	Design advice on layouts, color schemes, and furniture</li>
+                  <li>•	Budget-friendly design solutions</li>
+                  <li>•	3D renderings and mood boards </li>
+              </ul>
+          </div>
+          <div class="image-block fade-in-up">
+              <img src="./img/service3.jpg" alt="Virtual Design Consultations">
+          </div>
+      </div>
+      <div class="section reverse-layout fade-in-up">
+          <div class="text-block">
+              <h1>3D Rendering & Visualization</h1>
+              <p>Bringing your design to life before you begin the project is key to ensuring 
+                that all the details align with your expectations. Our 3D rendering and 
+                visualization services offer you a clear, realistic preview of how your space 
+                will look once completed, eliminating any uncertainties and giving you peace 
+                of mind.</p>
+              <ul>
+                  <li>•	Photorealistic 3D renderings</li>
+                  <li>•	Floor plans and space layouts</li>
+                  <li>•	Visualizations of furniture, textures, and finishes</li>
+                  <li>•	Virtual walkthroughs of your future space</li>
+              </ul>
+              <!--button class="custom-button">Check out more designs </button-->
+              <a href="portfolio.html" class="custom-button fade-in-up">Check out more designs</a>
+          </div>
+          <div class="image-block fade-in-up">
+              <img src="./img/service2.jpg" alt="Virtual Design Consultations">
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- Section Four -->
+<section class="design-process">
+  <div class="container fade-in-up">
+    <h1 class="title">
+      <span class="italic">The</span> Design Process
+    </h1>
+    <div class="grid-container">
+      <!-- Consultation -->
+      <div class="process-step">
+        <div class="icon-container">
+          <img src="https://images.squarespace-cdn.com/content/v1/644fcf34df17da21a1308b68/3dec3664-f434-48dd-8115-0c20761f3020/1.png?format=750w" alt="Consultation">
+        </div>
+        <h3 class="step-title">1. Consultation</h3>
+        <p class="step-description">Every great design starts with understanding. We begin by listening to your needs, vision, and preferences. This phase includes assessing the space and budget, as well as discussing functionality, aesthetics, and personal style. Our goal is to align with your vision to create a design that reflects you.</p>
+      </div>
+
+      <!-- Style & Process -->
+      <div class="process-step">
+        <div class="icon-container">
+          <img src="https://images.squarespace-cdn.com/content/v1/644fcf34df17da21a1308b68/063e065a-4467-456b-ba7f-86b7a35f33fb/2.png?format=750w" alt="Style & Process">
+        </div>
+        <h3 class="step-title">2. Style & Process</h3>
+        <p class="step-description">Once we have your insights, we create mood boards, sketches, and 3D renderings to bring your ideas to life visually. Together, we select the perfect materials, colors, textures, and furniture pieces that reflect your personal style. We also create a detailed project plan, outlining timelines, costs, and key milestones for a smooth execution.</p>
+      </div>
+    </section>
+
+      <!-- Execution -->
+      <section class="design-process2">
+        <div class="container2 fade-in-up">
+          <h1 class="title2">
+          </h1>
+          <div class="grid-container2">
+      <div class="process-step2">
+        <div class="icon-container2">
+          <img src="https://images.squarespace-cdn.com/content/v1/644fcf34df17da21a1308b68/a757c50c-36bf-4ea3-9f99-b126480d40ea/3.png?format=750w" alt="Execution">
+        </div>
+        <h3 class="step-title2">3. Execution</h3>
+        <p class="step-description2">With all approvals in place, we proceed with the physical transformation of your space. Our team of skilled craftsmen and designers works seamlessly to execute the plan, ensuring attention to detail at every step. Whether it's a full renovation or a simple makeover, we focus on quality, functionality, and style in equal measure.</p>
+      </div>
+
+      <!-- Completion & Follow-Up -->
+      <div class="process-step2">
+        <div class="icon-container2">
+          <img src="https://images.squarespace-cdn.com/content/v1/644fcf34df17da21a1308b68/7db5396e-441c-4a7c-ae1e-e3a73766cf35/4.png?format=750w" alt="Completion & Follow-Up">
+        </div>
+        <h3 class="step-title2">4. Completion & Follow-Up</h3>
+        <p class="step-description2">We check for precision in furniture placements, lighting, and overall harmony of the space. Any final tweaks are made to ensure your satisfaction. Our relationship doesn’t end with the final reveal! We offer ongoing support to help maintain the space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Six -->
+<section>
+  <section>
+    <div id="container5">
+      <div class="container5-text fade-in-up">
+      <p>
+        When it comes to transforming your space, you deserve a design partner who understands your vision, 
+        delivers exceptional results, and makes the process smooth and enjoyable. At Haven Space, we are 
+        committed to providing outstanding interior design services that exceed your expectations. With years 
+        of experience, our team brings a keen eye for detail and creates tailored design solutions that reflect 
+        your style and functionality needs. We work closely with you throughout the process, ensuring your 
+        ideas are incorporated at every stage. Our designs are both innovative and timeless, blending modern 
+        trends with enduring style. And our commitment doesn’t end with completion—we offer continued support 
+        to ensure your space remains functional and vibrant for years to come.
+        </p>
+              <a href="contact3.html" class="contact-button5 fade-in-up">Contact Us</a>
+      </div>
+  </div>
+  <!--div class="container5 fade-in-up">
+      <img class="background-image5" src="./img/cr23.jpg" alt="Background Image">
+      
+      <h2 class="overlay-text">
+         When it comes to transforming your space, you deserve a design partner who understands your vision, 
+          delivers exceptional results, and makes the process smooth and enjoyable. At Haven Space, we are 
+          committed to providing outstanding interior design services that exceed your expectations. With years 
+          of experience, our team brings a keen eye for detail and creates tailored design solutions that reflect 
+          your style and functionality needs. We work closely with you throughout the process, ensuring your 
+          ideas are incorporated at every stage. Our designs are both innovative and timeless, blending modern 
+          trends with enduring style. And our commitment doesn’t end with completion—we offer continued support 
+          to ensure your space remains functional and vibrant for years to come.
+      </h2-->
+      
+      <!--button class="contact-button5">Contact us</button-->
+      
+  <!--a href="contact3.html" class="contact-button5">Contact Us</a>
+  </div-->
+  </section>
+  
+
+
+<!-- Section Seven -->
+<footer class="footer fade-in-up">
+  <div class="footer-column">
+      <h3>Haven Space</h3>
+      <p>Creating elegant and functional spaces that inspire.</p>
+  </div>
+  
+  <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a>
+      </div>
+  </div>
+
+  <div class="footer-column">
+      <h3>Contact</h3>
+      <p>Haven Space</p>
+      <p>45445 Market St.</p>
+      <p>Bandra East, MUMBAI 400001</p>
+      <a href="tel:9324460564" class="contact-link">(+91) 9324460564</a>
+  </div>
+
+  <div class="footer-column">
+      <h3>Service Areas</h3>
+      <p>Dadar,Andheri,Kalyan,Thane,Bandra,Ghatkoper,
+        Byculla,Navi Mumbai, and throughout Mumbai.</p>
+  </div>
+
+  <div class="footer-column">
+      <h3>Quick Links</h3>
+      <a href="project.html">Home</a>
+      <a href="about3.html">About Us</a>
+      <a href="contact3.html">Contact</a>
+      <a href="service2.html">Services</a>
+      <a href="#">Shopping</a>
+      <a href="#">Portfolio</a>
+  </div>
+
+  <div class="footer-column">
+      <h3>Our Philosophy</h3>
+      <p>We believe in transforming spaces into timeless masterpieces, blending creativity, functionality, and your unique vision to create something extraordinary.</p>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  © 2024 Haven Space. All Rights Reserved.
+</div>
+
+<script src="demo.js"></script>
+
+
+</body>
+</html>
+
+
+

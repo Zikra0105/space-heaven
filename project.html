@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <meta charset="UTF-8">
+    <title>HOME</title>
+    <link rel="stylesheet" href="styles.css"/>
+    
+    <script src="script.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="footer.css"> -->
+    <!-- <script defer src="footer.js"></script> -->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+</head>
+<body> 
+<nav>
+    <ul>
+             <li><a href="project.html">Home</a></li>
+             <li><a href="about3.html">About Us</a></li>
+             <li><a href="contact3.html">Contact</a></li>
+             <li><a href="service2.html">Services</a></li>
+             <li><a href="shopping.html">Shopping</a></li>
+    
+             <li><a href="portfolio.html">Portfolio</a></li>
+
+    </ul>
+</nav>
+<div class="main-content">
+
+<span><p class="one"><img src="img/logo2.png" height="80px" > &nbsp; Haven &nbsp;   Space</p></span>
+<div class="half">
+
+ <img src="img/ho1-transformed.png" width="1530px" height="700px">
+ <a href="login.html" class="login-float-btn">Login</a>
+ 
+ <form  class="form" action="#" method="POST">
+    
+    
+        <h3>GET A FREE QUOTE !!</h3>
+    <!-- progress bar -->
+    <div class="progressbar">
+        <div class="progress" id="progress"></div>
+
+        <div class="progress-step progress-step-active" data-title="BHK" ></div>
+        <div class="progress-step" data-title="ROOM"></div>
+        <div class="progress-step" data-title="PACKAGE"></div>
+        <div class="progress-step" data-title="ESTIMATE"></div>
+     </div>
+     <!-- form -->
+     <div class="form-step form-step-active" >
+
+                <h4>Select your BHK Type</h4>
+                <!-- <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br><br>
+                <label for="phone">Phone No:</label>
+                <input type="tel" id="phone" name="phone">
+                <br><br> -->
+                <div class="radio-dropdown" id="bhkType">
+                    <input type="radio" id="1b" name="b" value="1">
+                    <label for="1b">1 BHK</label><br><br>
+                    <input type="radio" id="2b" name="b" value="2">
+                    <label for="2b">2 BHK</label><br><br>
+                    <input type="radio" id="3b" name="b" value="3">
+                    <label for="3b">3 BHK</label><br><br>
+                    <input type="radio" id="4b" name="b" value="4">
+                    <label for="4b">4 BHK</label><br><br>
+                    <input type="radio" id="5b" name="b" value="5">
+                    <label for="5b">5 BHK+</label><br><br>
+                </div>
+                 <!-- <select id="bhkType" required>
+                    <option value="" disabled selected>Select BHK Type</option>
+                    <option value="1">1 BHK</option>
+                    <option value="2">2 BHK</option>
+                    <option value="3">3 BHK</option>
+                    <option value="4">4 BHK</option>
+                </select> -->
+                <br>
+                <div class="btn-box">
+                <button type="button"  class="btn" (click)="onClick()">Next</button></div>
+    
+    </div>
+    <div class="form-step " id="rooms" >
+  
+            <h3>Select the rooms you'd like us to design </h3>
+            <p class="rooms">
+                <input type="checkbox" name="rooms">Living Room
+            </p>
+            <p class="rooms">
+                <input type="checkbox" name="rooms"> Kitchen
+            </p>
+            <p class="rooms">
+                <input type="checkbox" name="rooms">Bedroom
+            </p>
+            <p class="rooms">
+                <input type="checkbox" name="rooms">Bathroom
+            </p>
+            <p class="rooms">
+                <input type="checkbox" name="rooms">Dining
+            </p>
+            <div class="btn-box">
+            <button type="button"  class="btn-prev">Back   </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button"  class="btn" >Next</button></div>
+
+
+    
+    </div>
+    <div class="form-step" id="packageType" >
+        <div class="scroll-box">
+        <h4>Pick your package</h4>
+
+        <input type="radio" id="essential" name="package"> <strong>Essentials</strong></input>
+        <p style="color:rgb(64, 66, 66);">A range of essential home interior solutions that's perfect for all your needs.</p>
+        <img src="img/essenyial.webp" class="esse">
+
+       <br> <input type="radio" id="premium" name="package"><strong>Premium </strong></input>
+        <p style="color:rgb(64, 66, 66);">Elevate your space with timeless elegance and refined comfort.</p>
+        <img src="img/premium.webp" class="esse">
+
+        <input type="radio" id="luxury" name="package"> <strong>Luxury</strong></input>
+        <p style="color:rgb(64, 66, 66);">Indulge in unmatched sophistication with designs crafted for exclusivity and opulence.</p>
+        <img src="img/luxury.webp" class="esse">
+         </div>
+        <div class="btn-box">
+            <button type="button"  class="btn-prev">Back   </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button"  class="btn">Next</button></div>
+        
+    </div>
+    <div class="form-step" >
+
+    <h3>Your estimate is almost ready</h3>
+    <input type="text" id="name" placeholder="Name" style=" color: #333; /* Text color */
+    ::placeholder { color: #a0a0a0; };
+    border: 1px solid #595555 !important;
+    margin:8px 0;
+    padding: 10px 15px;
+    font-size:13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none; font-size: large;"><br>
+    <input type="email" id="email" placeholder="Email ID" style=" color: #333; /* Text color */
+    ::placeholder { color: #a0a0a0; };
+    border: 1px solid #595555 !important;
+    margin:8px 0;
+    padding: 10px 15px;
+    font-size:13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none; font-size: large;"><br>
+    <input type="text" id="phone" placeholder="Phone Number" style=" color: #333; /* Text color */
+    ::placeholder { color: #a0a0a0; };
+    border: 1px solid #595555 !important;
+    margin:8px 0;
+    padding: 10px 15px;
+    font-size:13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none; font-size: large;"><br>
+    <!-- <input type="checkbox" placeholder="" style=" background-color: #eee;
+    border: none;
+    margin:8px 0;
+    padding: 10px 15px;
+    font-size:13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;">Send me updates on Whatsapp<br> -->
+    
+    <input type="text" id="propertyName" placeholder="Property Name" style=" color: #919090; /* Text color */
+    ::placeholder { color: #a0a0a0; };
+    border: 1px solid #595555 !important;
+    margin:8px 0;
+    padding: 10px 15px;
+    font-size:13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;font-size: large;"><br>
+   
+    <div class="btn-box">
+        <button type="button"  class="btn-prev">Back   </button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <button type="button" id="getEstimateButton" onclick="calculateEstimate()">Get Estimate</button>
+
+    </div>
+    <div id="estimateResult" class="result">
+        <!-- The result will be displayed here -->
+    </div>
+    <div id="loginForm" class="login-form">
+        <h3>Please Log In to Continue</h3>
+        <form id="login">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+    
+    <style>
+    /* Style for the hidden login form */
+    .login-form {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        width: 300px;
+        text-align: center;
+    }
+    
+    .login-form input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 8px;
+    }
+    
+    .login-form button {
+        background-color: #333;
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        cursor: pointer;
+    }
+
+    
+    </style>
+
+    </div>
+</div>
+<!-- <div>
+    <p class="icon-container">
+        <a href="javascript:void(0);" onclick="openChatbot()">
+            <img src="img/paint-palette.png" class="icon" alt="icon">
+        </a>
+    </p>
+</div> -->
+
+<!-- Chatbot Modal -->
+<!-- <div id="chatbot" style="display:none;">
+    <div id="chatbox">
+        <div id="chatlog">
+            Chat messages will be displayed here
+        </div>
+        <input type="text" id="userMessage" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+    // Function to open the chatbot when the icon is clicked
+    function openChatbot() {
+        document.getElementById('chatbot').style.display = 'block';
+    }
+
+    // Function to send user message to Python backend
+    function sendMessage() {
+        var userMessage = document.getElementById('userMessage').value;
+        if (userMessage.trim() === '') return;
+
+        // Display the user's message in the chat log
+        var chatlog = document.getElementById('chatlog');
+        chatlog.innerHTML += "<div><b>You:</b> " + userMessage + "</div>";
+
+        // Send the message to the Flask backend
+        fetch('http://127.0.0.1:5000/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                message: userMessage,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            var chatbotReply = data.response;
+            chatlog.innerHTML += "<div><b>Chatbot:</b> " + chatbotReply + "</div>";
+//             document.getElementById('userMessage').value = ''; // Clear input field
+//         })
+//         .catch(error => {
+//             console.error('Error:', error);
+//         });
+//     }
+// </script> -->
+      
+<div id="chatbot-icon" onclick="toggleChat()">
+   <p> <img src="img/chatbotpic1.jpg" alt="Chat" width="100px" style="  width: 75px; /* Adjust size as needed */
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;"></p>
+</div>
+<div id="chatbox">
+    <div id="chat-header">Ask Me Anything! <span> <button class="close-btn" onclick="closeChat()">✖</button></span></div>
+    
+    <div id="chat-messages"></div>
+
+    <!-- Wrap input and button in a container -->
+    <div id="chat-input-container">
+        <input type="text" id="chat-input" placeholder="Type a message..." onkeypress="sendMessage(event)">
+        &nbsp;&nbsp;<button id="send-btn" onclick="sendMessage(event)">Send</button>
+    </div>
+</div>
+<br><br><br>
+<!-- BENEFITS -->
+<section class="why-choose-us">
+    <h2>Why Choose Haven Space?</h2>
+    <div class="benefits">
+        <div class="benefit-item">
+            <i class="fas fa-star"></i>
+            <h3>Expert Designers</h3>
+            <p>Our designers create luxurious, functional spaces tailored to your style.</p>
+        </div>
+        <div class="benefit-item">
+            <i class="fas fa-palette"></i>
+            <h3>Custom Designs</h3>
+            <p>Every project is unique, ensuring your space is truly personalized.</p>
+        </div>
+        <div class="benefit-item">
+            <i class="fas fa-tools"></i>
+            <h3>Quality Materials</h3>
+            <p>We use premium materials for long-lasting elegance.</p>
+        </div>
+        <div class="benefit-item">
+            <i class="fas fa-handshake"></i>
+            <h3>Affordable Pricing</h3>
+            <p>We offer the best designs at competitive prices.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- FAQ -->
+<!-- <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">What interior design services do you offer? <span>+</span></button>
+            <div class="faq-answer">
+                <p>We offer complete home and office interior design services, including furniture selection, color consultation, and space planning.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">How much does an interior design consultation cost? <span>+</span></button>
+            <div class="faq-answer">
+                <p>Our basic consultation is free! Detailed design plans are available at competitive rates.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How long does a typical project take? <span>+</span></button>
+            <div class="faq-answer">
+                <p>Project duration depends on the scope. Small projects take 2-4 weeks, while larger ones may take a few months.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Do you provide customized designs? <span>+</span></button>
+            <div class="faq-answer">
+                <p>Yes! We create fully customized designs tailored to your preferences and needs.</p>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">What interior design services do you offer? <span class="faq-toggle">+</span></button>
+            <div class="faq-answer">
+                <p>We offer complete home and office interior design services, including furniture selection, color consultation, and space planning.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <button class="faq-question">How much does an interior design consultation cost? <span class="faq-toggle">+</span></button>
+            <div class="faq-answer">
+                <p>Our basic consultation is free! Detailed design plans are available at competitive rates.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How long does a typical project take? <span class="faq-toggle">+</span></button>
+            <div class="faq-answer">
+                <p>Project duration depends on the scope. Small projects take 2-4 weeks, while larger ones may take a few months.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Do you provide customized designs? <span class="faq-toggle">+</span></button>
+            <div class="faq-answer">
+                <p>Yes! We create fully customized designs tailored to your preferences and needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+ <!-- FAQ END -->
+
+<!-- CTA BTN -->
+<section class="cta">
+    <h2>Let's Design Your Dream Home!</h2>
+    <p>Book a free consultation with our expert designers today.</p>
+    <a href="contact3.html" class="cta-button">Get Started</a>
+</section>
+
+<footer>
+    <div class="footer-container">
+
+        <!-- About Section -->
+        <div class="footer-section about">
+            <h2>Haven Space</h2>
+            <p>Your trusted partner in home interior design. Creating spaces that reflect elegance and functionality.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="project.html">Home</a></li>
+                <li><a href="about3.html">About Us</a></li>
+                <li><a href="service2.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact3.html">Contact</a></li>
+                <li><a href="shopping.html">Shopping</a></li>
+                
+            </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get exclusive interior design tips & offers.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" id="newsletter-email">
+                <button type="button" onclick="subscribeNewsletter()">Subscribe</button>
+            </form>
+        </div>
+        
+
+        <!-- Testimonials -->
+        <div class="footer-section testimonials">
+            <h3>What Our Clients Say</h3>
+            <p id="testimonial-text">⭐⭐⭐⭐⭐ "Absolutely loved the designs! My home looks stunning!" – Aisha R.</p>
+        </div>
+        <!-- ⭐⭐⭐ -->
+        <!-- Contact Information -->
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: info.havenspace@gmail.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Address: 123 Interior Design Lane, Suite 101, Mumbai, Maharashtra, 400001</p>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Haven Space. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    
+<link rel="stylesheet" href="styles.css">
+
+    
+               
+</body>
+</html>

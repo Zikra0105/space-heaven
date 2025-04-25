@@ -1,0 +1,45 @@
+
+<!-- Hi Steven M, I want to click on the specific radio button and the dropdown list selects the correct food based on the correct category. For example, if the user selects the Veggies Radio Button, Only the veggies values should show up in the dropdown list. Right now the radio buttons are not linked to the dropdowns at all and the dropdown list shows all the values. The values should change based on what radio button is selected. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h2>Radio Button with Correct Dropdown Values</h2>
+<p>I want to click on the specific radio button and the dropdown list selects the correct food based on its category</p>
+
+
+<form>
+<div>
+<input type="radio" id="veggies" name="food" value="veggies">
+<label for="veggies">Veggies</label><br>
+<input type="radio" id="carbs" name="food" value="carbs">
+<label for="carbs">Carbs</label><br>
+<input type="radio" id="meats" name="food" value="meats">
+<label for="meats">Meats</label>
+</div>
+
+<div>
+<select name="food" id="food">
+    <option value="broccoli">Broccoli</option>
+    <option value="tomato">Tomato</option>
+    <option value="asparagus">Asparagus</option>
+    <option value="carrots">Carrots</option>
+
+     <option value="rice">Rice</option>
+     <option value="potatoes">Potatoes</option>
+     <option value="bread">Bread</option>
+     <option value="fries">Fries</option>
+
+     <option value="fish">Fish</option>
+     <option value="lamb">Lamb</option>
+     <option value="chicken">Chicken</option>
+     <option value="beef">Beef</option>
+  </select>
+</div>
+
+</body>
+</html>

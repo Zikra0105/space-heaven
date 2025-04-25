@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Footer Base */
+footer {
+    background:#de7187; /* Pastel color */
+    padding: 40px 10%;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+
+/* Footer Boxes */
+ .box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box h3 {
+    font-size: 20px;
+    color: #5e2120;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.box a {
+    display: block;
+    font-size: 16px;
+    color: #683333;
+    text-decoration: none;
+    margin: 8px 0;
+    transition: 0.3s ease;
+}
+
+footer .box a:hover {
+    transform: scale(1.1);
+    color: #ffffff;
+}
+
+/* Footer Credit */
+footer .credit {
+    margin-top: 30px;
+    font-size: 15px;
+    color: #5D3B3B;
+}
+
+/* Bubbles Effect */
+.bubbles {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(148, 63, 63, 0.5);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    animation: float 5s infinite linear;
+}
+
+.bubble:nth-child(2) { left: 20%; animation-duration: 6s; animation-delay: 1s; }
+.bubble:nth-child(4) { right: 40%; animation-duration: 8s; animation-delay: 1s; }
+.bubble:nth-child(6) { left: 60%; animation-duration: 7s; animation-delay: 1s; }
+.bubble:nth-child(8) { right: 80%; animation-duration: 5s; animation-delay: 1s; }
+.bubble:nth-child(10) { left: 90%; animation-duration: 6s; animation-delay: 1s; }
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 0.6; }
+    50% { opacity: 2; }
+    100% { transform: translateY(-100px); opacity: 0; }
+}

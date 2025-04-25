@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" style="background:white;">
+    <head><title>Wall Arts</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Find and replace all price elements
+          document.querySelectorAll('h5').forEach(function(priceElement) {
+            priceElement.innerHTML = priceElement.innerHTML.replace('$', '₹');
+          });
+        });
+      </script>
+      
+<body style="background:white;">
+    <div id="cart-notification" style="display: none; position: fixed; top: 10px; right: 10px; background: #c44242; color: white; padding: 10px; border-radius: 5px;"></div>
+    <div class="header-container">
+        <a href="shopping.html#product"  style="text-decoration:none;border-bottom: none;">
+        <h1>Furniture Accents</h1>
+        </a>
+        <span> 
+            <a href="cart.html" class="cart-icon">
+                <i class='bx bx-shopping-bag'></i>
+                <span id="cart-badge">0</span> <!-- Badge for cart count -->
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- <i class='bx bx-search'></i> -->
+        </span>
+      </div>
+    <div class="card-content">
+        <div class="row">
+            <img src="img/fa1.jpg" class="walla" alt="">
+            <div class="card-body">
+               <!-- <h3></h3> -->
+               <p>Adorable Bear Side Table With Pink Flower</p>
+               <h5 class="price">Price $600</h5>
+               <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/fa2.jpg" class="walla" alt="">
+            <div class="card-body">
+               <!-- <h3>Chandelier </h3> -->
+               <p>Ornate Carved End/Bedside Table, An Elegant, Durable, and Luxury Table.</p>
+               <h5 class="price">Price $9000</h5>
+               <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/fa3.jpg"  class="walla" alt="">
+            <div class="card-body">
+               <!-- <h3></h3> -->
+               <p>	
+                Soft Sunflower Rabbit Fur Cushion Set of 2  for Sofa Filler Throw Pillow - 35 cm.</p>
+               <h5 class="price">Price $500</h5>
+               <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/fa4.jpg" class="walla" alt="">
+            <div class="card-body">
+               <!-- <h3>Chandelier </h3> -->
+               <p>Kids Set Of 3 Cute Cloud Moon Star Crib Cushions
+            </p>
+               <h5 class="price">Price $700</h5>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/fa5.jpg" class="walla" alt="">
+            <div class="card-body">
+               <!-- <h3>Chandelier </h3> -->
+               <p>Geometric Pattern Printed Set of 3 Cushions with Tassels</p>
+               <h5 class="price">Price $850</h5>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/fa6.jpg" class="walla" alt="">
+            <div class="card-body">
+               <!-- <h3>Chandelier </h3> -->
+               <p>Round Coffee Table Set of 3, Modern Nesting Stacking Center Table with Sturdy Metal Frame and Marble Look for Living Room, Bedroom or Apartments 
+            </p>
+               <h5 class="price">Price $2000</h5>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/fa7.jpg" class="walla" alt="">
+            <div class="card-body">
+               <!-- <h3>Chandelier </h3> -->
+               <p>Hexagonal Inlay Coffee Table Black & White</p>
+               <h5 class="price">Price $5000</h5>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/fa8.jpg" class="walla" alt="">
+            <div class="card-body">
+               <!-- <h3>Chandelier </h3> -->
+               <p>Solid Wood Coffee Table With 4 Stool for Living Room</p>
+               <h5 class="price">Price $1000</h5>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/fa9.jpg" class="walla" alt="">
+            <div class="card-body">
+               <!-- <h3>Chandelier </h3> -->
+               <p>White Floral Decorative Tray
+
+</p>
+               <h5 class="price">Price $2000</h5>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+        <div class="row">
+            <img src="img/fa10.jpg" class="walla" alt="">
+            <div class="card-body">
+               <!-- <h3>Chandelier </h3> -->
+               <p>Blossom Harmony Decorative Tray (Set Of 3)
+
+</p>
+               <h5 class="price">Price $3000</h5>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>HOME</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="script.js" defer></script>
+     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">  
+
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></head> -->
+<body>
+<nav>
+    <ul>    
+             <li><a href="project.html">Home</a></li>
+             <li><a href="about3.html">About Us</a></li>
+             <li><a href="contact3.html">Contact</a></li>
+             <li><a href="service2.html">Services</a></li>
+             <li><a href="shopping.html">Shopping</a></li>
+             <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+</nav>
+   
+<span><p class="one"><img src="img/logo2.png" height="80px" > &nbsp; Haven &nbsp;   Space</p></span>
+<div class="half">
+
+ <img src="img/ho1-transformed.png" width="1530px" height="700px">
+ <form  class="form" action="#" method="POST">
+    
+    
+        <h3>GET A FREE QUOTE !!</h3>
+    <!-- progress bar -->
+    <div class="progressbar">
+        <div class="progress" id="progress"></div>
+
+        <div class="progress-step progress-step-active" data-title="BHK" ></div>
+        <div class="progress-step" data-title="ROOM"></div>
+        <div class="progress-step" data-title="PACKAGE"></div>
+        <div class="progress-step" data-title="ESTIMATE"></div>
+     </div>
+     <!-- form -->
+     <div class="form-step form-step-active" >
+
+                <h4>Select your BHK Type</h4>
+                <!-- <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <br><br>
+                <label for="phone">Phone No:</label>
+                <input type="tel" id="phone" name="phone">
+                <br><br> -->
+                <div class="radio-dropdown" id="bhkType">
+                    <input type="radio" id="1b" name="b" value="1">
+                    <label for="1b">1BHK</label><br><br>
+                    <input type="radio" id="2b" name="b" value="2">
+                    <label for="2b">2 BHK</label><br><br>
+                    <input type="radio" id="3b" name="b" value="3">
+                    <label for="3b">3 BHK</label><br><br>
+                    <input type="radio" id="4b" name="b" value="4">
+                    <label for="4b">4 BHK</label><br><br>
+                    <input type="radio" id="5b" name="b" value="5">
+                    <label for="5b">5 BHK+</label><br><br>
+                </div>
+                 <!-- <select id="bhkType" required>
+                    <option value="" disabled selected>Select BHK Type</option>
+                    <option value="1">1 BHK</option>
+                    <option value="2">2 BHK</option>
+                    <option value="3">3 BHK</option>
+                    <option value="4">4 BHK</option>
+                </select> -->
+                <br>
+                <div class="btn-box">
+                <button type="button"  class="btn" (click)="onClick()">Next</button></div>
+    
+    </div>
+    <div class="form-step " id="rooms" >
+  
+            <h3>Select the rooms you'd like us to design </h3>
+            <p class="rooms">
+                <input type="checkbox" name="rooms">Living Room
+            </p>
+            <p class="rooms">
+                <input type="checkbox" name="rooms"> Kitchen
+            </p>
+            <p class="rooms">
+                <input type="checkbox" name="rooms">Bedroom
+            </p>
+            <p class="rooms">
+                <input type="checkbox" name="rooms">Bathroom
+            </p>
+            <p class="rooms">
+                <input type="checkbox" name="rooms">Dining
+            </p>
+            <div class="btn-box">
+            <button type="button"  class="btn-prev">Back   </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button"  class="btn" >Next</button></div>
+
+
+    
+    </div>
+    <div class="form-step" id="packageType" >
+        <div class="scroll-box">
+        <h4>Pick your package</h4>
+
+        <input type="radio" id="essential" name="package"> <strong>Essentials</strong></input>
+        <p style="color:rgb(64, 66, 66);">A range of essential home interior solutions that's perfect for all your needs.</p>
+        <img src="img/essenyial.webp" class="esse">
+
+       <br> <input type="radio" id="premium" name="package"><strong>Premium </strong></input>
+        <p style="color:rgb(64, 66, 66);">Elevate your space with timeless elegance and refined comfort.</p>
+        <img src="img/premium.webp" class="esse">
+
+        <input type="radio" id="luxury" name="package"> <strong>Luxury</strong></input>
+        <p style="color:rgb(64, 66, 66);">Indulge in unmatched sophistication with designs crafted for exclusivity and opulence.</p>
+        <img src="img/luxury.webp" class="esse">
+         </div>
+        <div class="btn-box">
+            <button type="button"  class="btn-prev">Back   </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="button"  class="btn">Next</button></div>
+        
+    </div>
+    <div class="form-step" >
+
+    <h3>Your estimate is almost ready</h3>
+    <input type="text" id="name" placeholder="Name" style="border-radius: 0px;margin:4px;font-size: larger;"><br>
+    <input type="email" id="email" placeholder="Email ID" style="border-radius: 0px;margin:4px;font-size: larger;"><br>
+    <input type="text" id="phone" placeholder="Phone Number" style="border-radius: 0px;margin:4px;font-size: larger;"><br>
+    <input type="checkbox" placeholder="" style="border-radius: 0px;margin:4px;font-size: larger;">Send me updates on Whatsapp<br>
+    
+    <input type="text" id="propertyName" placeholder="Property Name" style="border-radius: 0px;margin:4px;font-size: larger;"><br>
+   
+    <div class="btn-box">
+        <button type="button"  class="btn-prev">Back   </button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <button type="button" id="getEstimateButton" onclick="calculateEstimate()">Get Estimate</button>
+
+    </div>
+    <div id="estimateResult" class="result">
+        <!-- The result will be displayed here -->
+    </div>
+    <div id="loginForm" class="login-form">
+        <h3>Please Log In to Continue</h3>
+        <form id="login">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+    
+    <style>
+    /* Style for the hidden login form */
+    .login-form {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        width: 300px;
+        text-align: center;
+    }
+    
+    .login-form input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 8px;
+    }
+    
+    .login-form button {
+        background-color: #333;
+        color: white;
+        padding: 8px 12px;
+        border: none;
+        cursor: pointer;
+    }
+    </style>
+
+    </div>
+</div>
+   
+
+     
+      
+<link rel="stylesheet" href="styles.css">
+
+    
+               
+</body>
+</html>

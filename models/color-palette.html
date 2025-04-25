@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .color-box {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .color {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        .btn {
+            background-color: #b46868;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .btn:hover {
+            background-color: #9b6a60;
+        }
+        input[type="color"] {
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+            width: 50px;
+            height: 50px;
+        }
+        .base-color-container {
+           display: flex; /* Aligns items in a row */
+           align-items: center !important; /* Vertically centers them */
+           gap: 10px !important; /* Adds spacing between elements */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Color Palette Generator</h1>
+    <div class="container">
+        <p>Select a base color:</p>
+        <input type="color" id="colorPicker" value="#ff7f50">
+
+        <div class="base-color-container">
+    <div class="color-box" style="background-color: #FF7F50; width: 40px; height: 40px; border: 2px solid gray;"></div>
+    <button class="generate-btn">Generate Palette</button>
+</div>
+
+
+        <div class="color-box" id="palette">
+            <!-- Colors will be generated here -->
+        </div>
+    </div>
+
+    <script>
+        function generatePalette() {
+            const baseColor = document.getElementById("colorPicker").value;
+            const paletteContainer = document.getElementById("palette");
+            paletteContainer.innerHTML = ""; 
+
+            function lightenDarkenColor(col, amt) {
+                let usePound = false;
+                if (col[0] === "#") {
+                    col = col.slice(1);
+                    usePound = true;
+                }
+                let num = parseInt(col, 16);
+                let r = (num >> 16) + amt;
+                let g = ((num >> 8) & 0x00FF) + amt;
+                let b = (num & 0x0000FF) + amt;
+
+                r = r > 255 ? 255 : r < 0 ? 0 : r;
+                g = g > 255 ? 255 : g < 0 ? 0 : g;
+                b = b > 255 ? 255 : b < 0 ? 0 : b;
+
+                return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16).padStart(6, '0');
+            }
+
+            let colors = [
+                lightenDarkenColor(baseColor, 20), // Lighter shade
+                baseColor, 
+                lightenDarkenColor(baseColor, -20) // Darker shade
+            ];
+
+            colors.forEach(color => {
+                let colorDiv = document.createElement("div");
+                colorDiv.className = "color";
+                colorDiv.style.backgroundColor = color;
+                colorDiv.innerText = color.toUpperCase();
+                colorDiv.onclick = () => {
+                    navigator.clipboard.writeText(color.toUpperCase());
+                    alert("Copied: " + color.toUpperCase());
+                };
+                paletteContainer.appendChild(colorDiv);
+            });
+        }
+
+        window.onload = generatePalette; 
+    </script>
+
+</body>
+</html>

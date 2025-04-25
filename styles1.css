@@ -1,0 +1,325 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: blanchedalmond;
+}
+
+.half {
+  height: 75vh;
+  background-repeat: no-repeat;
+  /* background-image: url('images/s.jpg');    */
+}
+.half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.one {
+  font-family: Rockwell;
+  color: #c44242;
+  font-weight: bold;
+  font-size: 40px;
+  font-style: italic;
+  padding-left: 5px;
+  padding-bottom: 9px;
+  padding-top: 5px;
+  background-color: #fed69a;
+}
+.two {
+  font-family: Aptos;
+  color: #c44242;
+  font-size: 30px;
+}
+
+.scroll-box {
+  height: 300px; /* Set this to the desired height */
+  overflow-y: auto; /* Enables scrolling within the box */
+  padding: 10px; /* Optional: Add padding for a cleaner look */
+  border: 2px solid #791616; /* Optional: Add a border if needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #f0e6e6;
+  z-index: -1;
+  font-weight: bold;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #f0e6e6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+
+  color: #28231c;
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #791616;
+  font-weight: bold;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.35s;
+}
+
+:root {
+  --primary-color: #de7187;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+.form input {
+  background-color: rgba(255, 255, 255, 0.542);
+  border: none;
+  outline: none;
+  border: 2px solid rgb(14, 14, 14);
+  border-radius: 20px;
+}
+
+.form h3 {
+  align-items: center;
+  /* background-color:blanchedalmond; */
+  font-family: Poppins, sans-serif;
+}
+
+.btn-box {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  margin: 10px;
+}
+.form button {
+  border-radius: 30px;
+  font-size: large;
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(to left, #d79898, #fed69a);
+  cursor: pointer;
+  width: 40%;
+}
+
+.form {
+  font-family: Poppins, sans-serif;
+  font-size: large;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  box-shadow: 30px 0 40px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 35%;
+  left: 55%;
+  right: 10%;
+  padding: 30px 40px;
+  /* background: transparent; */
+  background-color: rgba(255, 255, 255, 0.542);
+  padding: 40px;
+  border: 4px solid rgba(67, 16, 16, 0.79);
+  border-radius: 10px;
+  /* style="position: absolute; top: 40%; left: 70%; background-color:rgba(243, 243, 243, 0.282); padding: 20px; border-radius: 10px;"> */
+}
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+.form-step-active {
+  display: block;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+.esse {
+  border: 6px solid #d79898;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+/* .radio-dropdown {
+
+    position: relative;
+  
+    display: inline-block;
+  
+    border: 1px solid #ccc;
+  
+    padding: 5px;
+  
+    cursor: pointer;
+  
+  }
+  
+  .radio-dropdown label {
+
+    display: block;
+  
+    padding: 5px;
+  
+    border-bottom: 1px solid #eee;
+  
+  }  
+
+/* .radio-dropdown input[type="radio"] {
+
+     /* Hide default radio button appearance */
+/*.radio-dropdown input[type="radio"]:checked + label {
+
+    background-color: lightblue; /* Style to indicate selection */
+
+nav {
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: right; /* Centers the items horizontally */
+}
+
+nav ul li {
+  margin: 0 15px; /* Adjust spacing between items */
+}
+
+nav ul li a {
+  display: block;
+  color: #c44242;
+  font-weight: bold;
+  text-align: right;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: rgb(211, 149, 119);
+  color: white;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.portfolio-item {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.05);
+}
+.types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  padding: 20px;
+}
+.types-item {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.types-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.types-item img:hover {
+  transform: scale(1.05);
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.service-item {
+  width: 250px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.service-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-item p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.service-item img {
+  width: 95%;
+  object-fit: cover;
+}

@@ -1,0 +1,275 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: blanchedalmond;
+}
+
+.half {
+  height: 75vh;
+  background-repeat: no-repeat;
+  /* background-image: url('images/s.jpg');    */
+}
+.half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.one {
+  font-family: Rockwell;
+  color: #c44242;
+  font-weight: bold;
+  font-size: 40px;
+  font-style: italic;
+  padding-left: 5px;
+  padding-bottom: 9px;
+  padding-top: 5px;
+  background-color: #fed69a;
+}
+.two {
+  font-family: Aptos;
+  color: #c44242;
+  font-size: 30px;
+}
+
+nav {
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: right; /* Centers the items horizontally */
+}
+
+nav ul li {
+  margin: 0 15px; /* Adjust spacing between items */
+}
+
+nav ul li a {
+  display: block;
+  color: #c44242;
+  font-weight: bold;
+  text-align: right;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color:rgb(211, 149, 119);
+    border-radius: 4px;
+    color: white;
+}
+.container {
+  height: 80vh;
+}
+.backimage {
+  /* border: 4px solid black; */
+  height: 90vh;
+  width: 100%;
+  background-image: url(./img/contact4.jpg);
+  background-size: cover;
+  z-index: -9;
+}
+.inpfield {
+  display: flex;
+  /* border: 1px solid white; */
+  height: 60px;
+  width: 500px;
+  text-align: center;
+  z-index: 1;
+}
+.container1 {
+  margin-left: 100px;
+  margin-top: 20px;
+}
+.container1 h2,
+h3 {
+  line-height: 1.8;
+}
+.container1 h2 {
+  /* border: 1px solid blue; */
+  text-align: center;
+  border-radius: 10px;
+  height: 25px;
+  width: 400px;
+  background-color: blanchedalmond;
+  margin-left: 80px;
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+.container1 h3 {
+  line-height: 3;
+}
+
+.container1 h3:hover {
+  color: blanchedalmond;
+}
+
+.container1 p {
+  color: blanchedalmond;
+}
+.namemail {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.email {
+  margin-left: 20px;
+}
+.name input {
+  height: 35px;
+}
+.name input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+.email input {
+  height: 35px;
+}
+.email input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+.sub {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.sub input {
+  height: 40px;
+  width: 348px;
+}
+.sub input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+.message {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.message input {
+  height: 150px;
+  width: 448px;
+}
+.message input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+.btn {
+  margin-top: 20px;
+}
+.btn button {
+  height: 40px;
+  width: 352px;
+  background-color: blanchedalmond;
+  border-color: blanchedalmond;
+}
+.container2 {
+  margin-left: 350px;
+  margin-top: 20px;
+}
+.info {
+  /* border: 1px solid white; */
+  height: 500px;
+  width: 400px;
+  align-items: center;
+}
+
+.emailus {
+  margin-left: 130px;
+  border-radius: 8px;
+  height: 25px;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.emailid {
+  margin-top: 40px;
+}
+.emailus h2 {
+  letter-spacing: 1.1px;
+  font-size: 20px;
+  color: aliceblue;
+}
+.emailid h4 {
+  margin-top: 15px;
+  font-size: 20px;
+  color: blanchedalmond;
+}
+.emailid h3 {
+  font-size: 20px;
+  margin: 5px;
+  color: blanchedalmond;
+}
+.connect {
+  border-radius: 8px;
+  margin-left: 100px;
+
+  /* border: 1px solid white; */
+  margin-top: 40px;
+  height: 30px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.connect h2 {
+  color: aliceblue;
+}
+.slogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.ins {
+  margin-left: 12px;
+}
+.gmail {
+  margin-left: 12px;
+}
+.fb i {
+  color: aliceblue;
+}
+.ins i {
+  color: aliceblue;
+}
+.gmail i {
+  color: aliceblue;
+}
+
+.des {
+  margin-top: 40px;
+}
+
+.des h4 {
+  color: blanchedalmond;
+}
+
+.container1,
+.container2 {
+  animation: slideFromRight 1.5s linear;
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+ input{
+  border-radius: 5px;
+  outline: none;
+  border:none;
+  font-size: 18px;
+  margin-top:15px;
+ }

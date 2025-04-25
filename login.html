@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><title>Login Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+        <meta charset="UTF-8" content="width=device-width, initial-scale=1.0"/>
+    
+    </head>
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Find and replace all price elements
+          document.querySelectorAll('h5').forEach(function(priceElement) {
+            priceElement.innerHTML = priceElement.innerHTML.replace('$', '₹');
+          });
+        });
+      </script>
+      
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></head> -->
+<body>
+<nav style="padding: 10px 20px;border-bottom: 5px solid rgb(211, 149, 119);">
+    <ul>
+             <li><a href="project.html">Home</a></li>
+             <li><a href="#about">About Us</a></li>
+             <li><a href="#contactl">Contact</a></li>
+             <li><a href="services.html">Services</a></li>
+             <li><a href="shopping.html">Shopping</a></li>
+    
+             <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+</nav>
+
+<div class="log-back" >
+<div class="container" id="container">
+    <!-- LOGIN FORM -->
+<div class="login">
+    <form id="login-form" onsubmit="login(event)">
+      <h1>Login</h1>
+      <input type="text" id="login-username" required placeholder="Username" />
+      <input type="password" id="login-password" required placeholder="Password" />
+      <button type="submit">Login</button>
+      <p>
+        Don't have an account?
+        <a class="hidden" id="register">Sign Up</a>
+      </p>
+    </form>
+  </div>
+  
+  <!-- SIGN-UP FORM -->
+  <div class="sign-up">
+    <form id="signup-form" onsubmit="signup(event)">
+      <h1>Sign Up</h1>
+      <div class="icons">
+        <a href="#" class="icon1"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="icon1"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="icon1"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <input type="text" id="signup-username" required placeholder="Username" />
+      <input type="email" id="signup-email" required placeholder="Email" />
+      <input type="password" id="signup-password" required placeholder="Password" />
+      <button type="submit">Sign Up</button>
+      <p>
+        Already have an account? <a class="hidden" id="login">Login</a>
+      </p>
+    </form>
+  </div>
+
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <h1>Welcome User! </h1>
+                <p>If you already have an account </p>
+                <button class="hidden" id="login-btn">Login</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>Hello, User!</h1>
+                <p>If you have don't have an account</p>
+                <button class="hidden" id="register-btn">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+   async function signup(event) {
+  event.preventDefault();
+
+  const username = document.getElementById("signup-username").value;
+  const email = document.getElementById("signup-email").value;
+  const password = document.getElementById("signup-password").value;
+
+  try {
+    const response = await fetch("http://127.0.0.1:5000/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, email, password }),
+    });
+
+    const result = await response.json();
+    alert(result.message);
+
+    if (response.ok) {
+      document.getElementById("signup-form").reset();
+      document.getElementById("login").click(); // Switch to login
+    }
+  } catch (error) {
+    console.error("Signup error:", error);
+    alert("Signup failed.");
+  }
+}
+
+async function login(event) {
+  event.preventDefault();
+
+  const username = document.getElementById("login-username").value;
+  const password = document.getElementById("login-password").value;
+
+  try {
+    const response = await fetch("http://127.0.0.1:5000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, password }),
+    });
+
+
+    const result = await response.json();
+    alert(result.message);
+
+    if (response.ok) {
+      localStorage.setItem("username", username);
+      window.location.href = "project.html"; // or your landing page
+    }
+  } catch (error) {
+    console.error("Login error:", error);
+    alert("Login failed.");
+  }
+  
+}
+    </script>
+
+
+
+
+</body></html>

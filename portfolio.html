@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="script.js" defer></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+<style>
+  /* General Page Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8ff;
+    text-align: center;
+    
+    
+}
+
+/* Navbar Styles */
+/* nav {
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 5px solid rgb(211, 149, 119);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: brown;
+    font-size: 16px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: black;
+} */
+
+/* Portfolio Grid */
+.portfolio-container {
+    display:flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.portfolio-item img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox (Image Popup) */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 3D Models Grid */
+.model-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if needed */
+    justify-content: center; /* Center models horizontally */
+    align-items: center; /* Center models vertically */
+    gap: 20px; /* Space between models */
+    padding: 20px;
+    background-color: #eee7de; /* Light pastel green */
+}
+
+.model-gallery model-viewer {
+    width: 300px; /* Set a defined width */
+    height: 300px; /* Set a defined height */
+    border: 2px solid rgb(0, 0, 0); /* Debugging border */
+    border-radius: 3px;
+}
+ 
+/* h2{
+  font-family: "Satisfy", cursive !important;
+  font-weight: 600;
+  font-style: normal;
+} */
+
+/* Contact Form */
+/* #contact {
+    background: #f8f8ff;
+    padding: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+} */
+
+</style>
+    <!-- Navigation Bar -->
+    <nav style="padding: 10px 20px;border-bottom: 5px solid rgb(211, 149, 119); ">
+      <ul>
+               <li><a href="project.html">Home</a></li>
+               <li><a href="about3.html">About Us</a></li>
+               <li><a href="contact3.html">Contact</a></li>
+               <li><a href="service2.html">Services</a></li>
+               <li><a href="shopping.html">Shopping</a></li>
+               <li><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+  </nav>
+     
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" >
+        <h2>Our Interior Design Projects</h2>
+        <p>Explore our past projects featuring stunning interior design concepts.</p>
+        <div class="portfolio-container">
+            <div class="portfolio-item"><img src="img/essential.png" alt="Interior Design 1"></div>
+            <div class="portfolio-item"><img src="img/lux1.jpeg" alt="Interior Design 2"></div>
+            <div class="portfolio-item"><img src="img/prem1.jpeg" alt="Interior Design 3"></div>
+            <div class="portfolio-item"><img src="img/hom.jpg" alt="Interior Design 4"></div>
+        </div>
+    </section>
+
+    <!-- Lightbox for Image Popup -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="Expanded Image">
+    </div>
+
+    <!-- 3D Models -->
+    <section class="models">
+        <h2>3D Interior Models</h2>
+        <div class="model-gallery">
+            <div class="model-item">
+                <model-viewer src="models/apartment_plan.glb" auto-rotate 
+                camera-controls shadow-intensity="1"></model-viewer>
+            </div> 
+            <div class="model-item">
+                <model-viewer src="models/modern_house (1).glb" auto-rotate 
+                camera-controls shadow-intensity="1" ></model-viewer>
+            </div>
+             <div class="model-item">
+                <model-viewer src="models/3d_lounge_01_fbx.glb" auto-rotate 
+                camera-controls shadow-intensity="1" ></model-viewer>
+            </div>
+            <div class="model-item">
+              <model-viewer src="models/modern_scandinavian_kitchen_island.glb" auto-rotate 
+              camera-controls shadow-intensity="1.5"  ></model-viewer>
+            </div>
+        </div> 
+    </section>
+
+    <!-- Contact Form -->
+    <!-- <section id="contact">
+        <h2>Get in Touch</h2>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section> -->
+
+    <section id="portfolio">
+      <h2>Our Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="img/livingroom_design.jpg" alt="Living Room Design">
+          <p>Living Room Design</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="img/kitchen_design.jpg" alt="Kitchen Design">
+          <p>Kitchen Design</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="img/bedroom_design.jpg" alt="Bedroom Design">
+          <p>Bedroom Design</p>
+        </div>
+        <div class="portfolio-item">
+          <img src="img/office_design.jpg" alt="Office Design">
+          <p>Office Design</p>
+        </div>
+      </div>
+    </section>
+    
+    <style>
+      #portfolio {
+        text-align: center;
+        padding: 40px 0;
+        
+      }
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .portfolio-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .portfolio-item p {
+        margin-top: 10px;
+        font-size: 16px;
+        font-family: "Concert One", sans-serif;
+        font-weight: 600;
+      }
+      @media (max-width: 768px) {
+        .portfolio-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 480px) {
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+
+<section id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-carousel">
+    <div class="testimonial-item">
+      <p>"Great service and wonderful designs. Highly recommend!"</p>
+      <span>- Jane Doe</span>
+    </div>
+    <div class="testimonial-item">
+      <p>"The team transformed my home! I couldn't be happier with the results."</p>
+      <span>- John Smith</span>
+    </div>
+    <div class="testimonial-item">
+      <p>"Professional, creative, and efficient. Excellent work!"</p>
+      <span>- Emily White</span>
+    </div>
+    <div class="testimonial-item">
+      <p>"From start to finish, the experience was seamless. My living room looks straight out of a magazine!"</p>
+      <span>- Daniel Brown</span>
+    </div>
+    <div class="testimonial-item">
+      <p>"A dream come true! They listened to my needs and exceeded my expectations."</p>
+      <span>- Olivia Wilson</span>
+    </div>
+    <div class="testimonial-item">
+      <p>"The pastel color palette recommendations were exactly what I wanted! Love the cozy atmosphere now."</p>
+      <span>- Emma Johnson</span>
+    </div>
+    <div class="testimonial-item">
+      <p>"They turned my vision into reality with such elegance. The attention to detail was impeccable."</p>
+      <span>- Sophia Martinez</span>
+    </div>
+    <div class="testimonial-item">
+      <p>"Absolutely loved the 3D model previews. It helped me visualize my home makeover perfectly!"</p>
+      <span>- Liam Anderson</span>
+    </div>
+    
+  </div>
+</section>
+
+<style>
+  #testimonials {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .testimonial-carousel {
+    display: flex;
+   overflow-x: auto;
+   scroll-snap-type: x mandatory;
+   gap: 20px;
+   padding: 20px;
+   scroll-behavior: smooth;
+  }
+  .testimonial-item {
+    flex: 0 0 auto;
+   scroll-snap-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .testimonial-item p {
+    font-style: italic;
+    
+  }
+  .testimonial-item span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+</style>
+
+
+<section id="blog">
+  <h2>Latest Design Tips & Trends</h2>
+  <div class="blog-cards">
+    <div class="blog-card">
+      <img src="img/2922.jpg" alt="Design Tip 1">
+      <h3>How to Choose the Perfect Sofa</h3>
+      <p>Learn how to pick the best sofa for your living room with our expert advice...</p>
+      <a href="https://www.decorilla.com/online-decorating/sofa-buying-guide/" target="_blank">Read More</a>
+    </div>
+    <div class="blog-card">
+      <img src="img/5colorscheme.jpg" alt="Design Tip 2">
+      <h3>5 Color Schemes for a Cozy Home</h3>
+      <p>Discover color combinations that create a warm and welcoming atmosphere...</p>
+      <a href="https://www.vogue.com/article/best-minimal-decor-ideas" target="_blank">Read More</a>
+    </div>
+    <div class="blog-card">
+      <img src="img/smallspaces1.jpg" alt="Design Tip 3">
+      <h3>Maximizing Small Spaces</h3>
+      <p>Space-saving tips and tricks for small apartments...</p>
+      <a href="https://www.homesandgardens.com/interior-design/danielle-rose-tips-on-making-eclectic-interiors-feel-luxurious" target="_blank">Read More</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  #blog {
+    padding: 40px 0;
+    text-align: center;
+    background-color: rgb(240, 240, 235);
+  }
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .blog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .blog-card h3 {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+  .blog-card p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .blog-card a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  @media (max-width: 768px) {
+    .blog-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 480px) {
+    .blog-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
+<section id="tools">
+  <h2>Interactive Design Tools</h2>
+
+  <div class="tool">
+    <h3>Color Palette Generator</h3>
+    <p>Create the perfect color palette for your next room design.</p>
+    <a href="color-palette.html">
+      <button>Try Now</button>
+  </a>
+  </div>
+</section>
+
+<style>
+  #tools {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  .tool {
+    background-color: #f4eaef;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .tool h3 {
+    font-size: 24px;
+  }
+  .tool p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .tool button {
+    background-color: #bb8acd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .tool button:hover {
+    background-color: #835b94;
+  }
+</style>
+
+
+</body>
+</html>
